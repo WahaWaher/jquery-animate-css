@@ -5,7 +5,7 @@ jQuery plugin for using Animate.css with jQuery
 ## Install
 ```sh
 # NPM
-npm i jquery-animate-css
+npm i @wahawaher/jquery-animate-css
 ```
 ## Include
 ```html
@@ -14,7 +14,7 @@ npm i jquery-animate-css
 <!-- jQuery -->
 <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 <!-- jQuery AnimateCSS Plugin -->
-<script src="./node_modules/jquery-animate-css/jquery.animate.css.min.js"></script>
+<script src="./node_modules/@wahawaher/jquery-animate-css/jquery.animate.css.min.js"></script>
 ```
 ## Usage
 ### Override default options (not necessary)

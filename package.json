@@ -1,5 +1,5 @@
 {
-  "name": "jquery-animate-css",
+  "name": "@wahawaher/jquery-animate-css",
   "version": "1.0.0",
   "description": "jQuery plugin for using Animate.css with jQuery",
   "repository": {
