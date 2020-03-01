@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery.animateCSS</title>
+  <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+  <style>
+    .block {
+      width: 350px;
+      height: 50px;
+      color: #fff;
+      text-align: center;
+      line-height: 50px;
+      font-weight: bold;
+      background: #fa0;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="block">jQuery.animateCSS</div>
+
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./jquery.animate.css.js"></script>
+  <!-- <script src="./jquery.animate.css.min.js"></script> -->
+  <script>
+    $(document).ready(function() {
+      // Override default settings
+      $.fn.animateCSS.defaults = $.extend(true, {}, $.fn.animateCSS.defaults, {
+        duration: 750,
+        ease: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+        clear: true
+      });
+
+      $('.block').animateCSS('fadeOutLeft', 700, function () {
+        $(this).animateCSS('fadeInRight', 650, function () {
+          $(this).animateCSS('fadeOutDown', {
+            clear: false,
+            complete: function () {
+              $(this).animateCSS('zoomIn', {
+                clear: false,
+                delay: 500,
+                duration: 1500,
+                ease: 'ease-in'
+              });
+            }
+          });
+        })
+      });
+    });
+  </script>
+</body>
+</html>
