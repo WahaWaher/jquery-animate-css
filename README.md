@@ -1,4 +1,4 @@
-jQuery AnimateCSS Plugin <sup>1.0.0</sup>
+jQuery AnimateCSS Plugin <sup>1.0.1</sup>
 -------
 jQuery plugin for using Animate.css with jQuery
 

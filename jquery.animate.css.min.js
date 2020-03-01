@@ -1,7 +1,7 @@
 /**
  * jQuery.animateCSS
- * Version: 1.0.0
- * Repo: https://github.com/WahaWaher/jquery.animate-css
+ * Version: 1.0.1
+ * Repo: https://github.com/WahaWaher/jquery-animate-css
  * Author: Sergey Kravchenko
  * Contacts: wahawaher@gmail.com
  * License: MIT
