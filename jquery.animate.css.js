@@ -1,6 +1,6 @@
 /**
  * jQuery.animateCSS
- * Version: 1.0.1
+ * Version: 1.0.2
  * Repo: https://github.com/WahaWaher/jquery-animate-css
  * Author: Sergey Kravchenko
  * Contacts: wahawaher@gmail.com
@@ -50,6 +50,8 @@
     }
 
     $elem.on(animationEnd, onAnimationEnd);
+
+    if (!window.AnimationEvent) onAnimationEnd();
   };
 
   // Animation method
