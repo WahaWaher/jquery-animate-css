@@ -1,6 +1,6 @@
 jQuery AnimateCSS Plugin <sup>1.0.2</sup>
 -------
-jQuery plugin for using Animate.css with jQuery
+Plugin for using Animate.css or any else css-animation lib with jQuery
 
 ## Install
 ```sh
@@ -22,7 +22,7 @@ Full list of options with default values below
 ```javascript
 $.fn.animateCSS.defaults = $.extend(true, {}, $.fn.animateCSS.defaults, {
   duration: 750,
-  ease: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+  ease: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)', // or 'ease-out'
   clear: true
 });
 ```
@@ -43,17 +43,19 @@ $('div').animateCSS('zoomIn', 1200, function(options) {
 $('div').animateCSS('zoomOut', {
   delay: 0, // delay, ms
   duration: 1000, // duration, ms
-  ease: '', // animation timing function
-  class: 'animated', // main animation class
+  ease: '', // animation timing function, 'ease-in-out' or 'cubic-bezier(...)'
+  class: 'animated', // main animation class, to control basic animation options
   clear: false, // cleaning classes after the animation ends
   
   // before animation
   start: function(options) {
-    // this - HTML element
+    // this - single HTML element
+    // options - options for current animation
   },
-  // animation completed
+  // animation completed ("animationend" event handler)
   complete: function(options) {
-    // this - HTML element
+    // this - single HTML element
+    // options - options for current animation
   }
 });
 ```
