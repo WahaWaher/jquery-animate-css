@@ -38,7 +38,7 @@
         $(this).animateCSS('fadeInRight', 650, function () {
           $(this).animateCSS('fadeOutDown', {
             clear: false,
-            complete: function () {
+            complete: function (options) {
               $(this).animateCSS('zoomIn', {
                 clear: false,
                 delay: 500,
